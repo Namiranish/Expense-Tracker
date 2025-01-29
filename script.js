@@ -81,12 +81,23 @@ document.addEventListener("DOMContentLoaded", function () {
             options: { responsive: true }
         });
 
-        // Update Recent Expenses List
+        // Update Recent Expenses List (display from bottom)
         const recentExpensesList = document.getElementById("recent-expenses-list");
         recentExpensesList.innerHTML = ''; // Clear the current list
-        expenses.forEach(expense => {
+
+        // Reverse the arrays to show the most recent first
+        const allEntries = [...expenses, ...incomes].reverse(); // Merge and reverse
+
+        allEntries.forEach(entry => {
             const li = document.createElement('li');
-            li.textContent = `${expense.name} - ₹${expense.amount} (${expense.category}, ${expense.date})`;
+            if (entry.name) { // Expense
+                li.textContent = `${entry.name} - ₹${entry.amount} (${entry.category}, ${entry.date})`;
+                li.style.backgroundColor = "#f44336"; // Red background for expenses
+            } else { // Income
+                li.textContent = `${entry.source} - ₹${entry.amount} (${entry.date})`;
+                li.style.backgroundColor = "#4caf50"; // Green background for incomes
+            }
+            li.style.width = "540px";
             recentExpensesList.appendChild(li);
         });
 
@@ -171,4 +182,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initialize the charts and expenses on page load
     updateChartsAndExpenses();
+});
+
+
+//login
+
+document.addEventListener("DOMContentLoaded", function () {
+    const userNameElement = document.getElementById("userName");
+    const loggedInUser = localStorage.getItem("loggedInUser");
+
+    if (loggedInUser) {
+        userNameElement.textContent = loggedInUser; // Show username
+    } else {
+        alert("You are not logged in! Redirecting to login page...");
+        window.location.href = "login.html"; // Redirect if not logged in
+    }
+});
+
+
+//logout 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const logoutBtn = document.querySelector("#logout"); // Select Logout button
+
+    logoutBtn.addEventListener("click", function () {
+        const confirmLogout = confirm("Are you sure you want to log out?");
+
+        if (confirmLogout) {
+            localStorage.removeItem("loggedInUser"); // Clear user data
+            alert("Logged out successfully!"); // Show alert
+            window.location.href = "login.html"; // Redirect to login
+        }
+    });
 });

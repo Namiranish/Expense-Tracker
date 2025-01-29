@@ -1,4 +1,4 @@
-body {
+body{
     display: flex;
     background-color: #121212;
     color: #fff;
@@ -74,6 +74,7 @@ ul li.active {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 #incomeExpenseChart {
@@ -268,4 +269,21 @@ input[type="date"],
 select {
     margin-left: 10px;
     margin-right: 10px;
+}
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.toast.show {
+    opacity: 1;
 }
