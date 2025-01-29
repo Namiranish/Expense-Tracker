@@ -18,6 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("loggedInUser", storedUser.username);
 
         alert("Login successful! Redirecting to home page...");
-        window.location.href = "index.html"; // Redirect to home page
+        window.location.href = "../Main/main.html"; // Redirect to main page
     });
 });
