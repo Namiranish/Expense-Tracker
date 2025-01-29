@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Lavishly+Yours&family=Parisienne&family=Playwrite+DE+VA+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", serif;
+}
+
 body{
     display: flex;
     background-color: #121212;
@@ -34,14 +40,21 @@ ul {
     list-style: none;
     padding: 0;
 }
-
+a{
+    text-decoration: none;
+}
 ul li {
     padding: 10px;
     cursor: pointer;
+    color: #fff;
+    text-decoration: none;
 }
+ ul li:hover{
+    background-color: #222;
+ }
 
 ul li.active {
-    background-color: #333;
+    background-color: #222;
     border-radius: 5px;
 }
 
