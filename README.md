@@ -2,7 +2,7 @@
 
 Effortlessly track your expenses and manage your finances with **SpendWise**, a modern and intuitive expense tracker. Stay in control of your budget and make smarter financial decisions!  
 
-🔗 **Live Demo:** [Click Here to Access SpendWise](YOUR_HOSTED_LINK_HERE)  
+🔗 **Live Demo:** [Click Here to Access SpendWise](https://expense-tracker-namira.vercel.app/)  
 
 ---
 
