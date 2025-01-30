@@ -17,13 +17,13 @@ body {
     width: 90%;
 }
 .login-container {
-    background: rgba(0, 0, 0, 0.6); /* Transparent background */
+    background: rgba(0, 0, 0, 0.6);
     padding: 50px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    width: 380px; /* Increased width */
+    width: 380px; 
     text-align: center;
-    color: white; /* Text color for better visibility */
+    color: white; 
 }
 
 h2 {
@@ -49,7 +49,7 @@ button {
     width: 370px;
     padding: 12px;
     margin-top: 10px;
-    background-color: #6200ea; /* Blue button */
+    background-color: #6200ea; 
     color: white;
     border: none;
     border-radius: 6px;
@@ -59,7 +59,7 @@ button {
 }
 
 button:hover {
-    background-color: #4b00c2; /* Slightly darker shade on hover */
+    background-color: #4b00c2; 
 }
 
 .google-login {
@@ -83,11 +83,34 @@ button:hover {
 }
 
 .signup-option a {
-    color: #bb86fc; /* Light purple for links */
+    color: #bb86fc; 
     text-decoration: none;
     font-weight: bold;
 }
 
 .signup-option a:hover {
     text-decoration: underline;
+}
+@media only screen and (max-width: 600px) {
+    .login-container {
+        padding: 30px;
+        width: 90%; 
+        margin: 20px;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    button {
+        width: 107%; 
+        max-width: none; 
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    button {
+        width: 110%; 
+        max-width: none; 
+    }
 }

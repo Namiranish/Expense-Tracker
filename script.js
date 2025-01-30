@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Store user details in Local Storage
+        //  Local Storage
         const user = { username, email, password };
         localStorage.setItem("user", JSON.stringify(user));
 

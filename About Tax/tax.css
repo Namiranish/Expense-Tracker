@@ -61,3 +61,46 @@ button {
 button:hover {
     background-color: #4b00c2; /* Darker Purple on Hover */
 }
+@media only screen and (max-width: 600px) {
+    body {
+        height: 100vh;
+        padding: 10px;
+        margin: 20px;
+    }
+
+    .tax-container {
+        padding: 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    ul {
+        padding-left: 10px;
+    }
+
+    ul li {
+        font-size: 0.85rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    body {
+        margin: 5px;
+    }
+
+}

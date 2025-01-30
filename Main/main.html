@@ -8,9 +8,12 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js Library -->
 </head>
 <body>
-    <div class="sidebar">
+    
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="mobile-nav">
         <div class="profile">
-            <img src="../assets/2.png" alt="User Profile">
+            <img src="../assets/SpendWise.png" alt="User Profile">
             <h3 id="userName"></h3>
         </div>
         <ul>
@@ -18,19 +21,19 @@
             <a href="../AskAi/askAi.html"><li id="askAi">Ask AI</li></a>
             <a href="../About Tax/tax.html"><li>About Tax</li></a>
             <li id="logout">Logout</li>
-            <div id="toast" class="toast hidden">Logged out successfully!</div>
-
         </ul>
+        <div id="toast" class="toast hidden">Logged out successfully!</div>
     </div>
 
+    <!-- Main Content Area -->
     <div class="main-content" id="main-content">
-        <h2>Dashboard Overview</h2>
+        <h2 id="dashboardOverview">Dashboard Overview</h2>
         <div class="dashboard-actions">
             <div class="btnsss">
                 <button id="new-expense-btn" class="btn">+ New Expense</button>
                 <button id="new-income-btn" class="btn">+ New Income</button>
             </div>
-            <!-- New Net Balance Section -->
+            <!-- Net Balance Section -->
             <div class="net-balance">
                 <h3>Net Balance</h3>
                 <p id="net-balance-amount">₹0</p> <!-- This will dynamically update -->

@@ -97,7 +97,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 li.textContent = `${entry.source} - ₹${entry.amount} (${entry.date})`;
                 li.style.backgroundColor = "#4caf50"; // Green background for incomes
             }
-            li.style.width = "540px";
+            if (window.matchMedia("(max-width: 1600px)").matches) {
+                li.style.width = "100%";
+            }
+            li.style.width = "100%";
+            if (window.matchMedia("(max-width: 415px)").matches) {
+                li.style.width = "90%";
+            }
+            if (window.matchMedia("(max-width: 400px)").matches) {
+                li.style.width = "85%";
+            }
             recentExpensesList.appendChild(li);
         });
 
@@ -192,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const loggedInUser = localStorage.getItem("loggedInUser");
 
     if (loggedInUser) {
-        userNameElement.textContent = loggedInUser; // Show username
+        userNameElement.textContent = `Hi, ${loggedInUser}`; // Show username
     } else {
         alert("You are not logged in! Redirecting to login page...");
         window.location.href = "../Login/login.html"; // Redirect if not logged in
@@ -215,3 +224,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
